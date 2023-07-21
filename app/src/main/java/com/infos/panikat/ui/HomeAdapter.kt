@@ -23,7 +23,7 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.CardHolder>() {
         holder.binding.apply {
             exerciseTitleText.text = card.title
             exerciseDescriptionText.text= card.desc
-
+            estimatedTimeChip.text = card.time
         }
     }
 
