@@ -3,11 +3,11 @@ package com.infos.panikat.ui
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.infos.panikat.data.cardData
+import com.infos.panikat.data.CardData
 import com.infos.panikat.databinding.CardRowBinding
 
 class HomeAdapter : RecyclerView.Adapter<HomeAdapter.CardHolder>() {
-    private var list = emptyList<cardData>()
+    private var list = emptyList<CardData>()
 
     class CardHolder(val binding : CardRowBinding): RecyclerView.ViewHolder(binding.root) {
 
@@ -29,7 +29,7 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.CardHolder>() {
 
     override fun getItemCount() = list.size
 
-    fun setData(newList: List<cardData>) {
+    fun setData(newList: List<CardData>) {
         list = newList
         notifyDataSetChanged()
     }

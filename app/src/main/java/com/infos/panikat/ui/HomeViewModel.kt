@@ -6,13 +6,13 @@ import androidx.lifecycle.ViewModel
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.toObject
 import com.infos.panikat.data.ResultData
-import com.infos.panikat.data.cardData
+import com.infos.panikat.data.CardData
 
 class HomeViewModel: ViewModel() {
 
-    private var list = mutableListOf<cardData>()
-    private val _card = MutableLiveData<List<cardData>>()
-    val card: LiveData<List<cardData>> = _card
+    private var list = mutableListOf<CardData>()
+    private val _card = MutableLiveData<List<CardData>>()
+    val card: LiveData<List<CardData>> = _card
     private val db by lazy { FirebaseFirestore.getInstance() }
 
 
@@ -25,7 +25,7 @@ class HomeViewModel: ViewModel() {
                         val title = item.title
                         val desc = item.desc
                         val time = item.time
-                        val card1 = cardData(title, desc, time)
+                        val card1 = CardData(title, desc, time)
                         list.add(card1)
                     }
                     _card.value = list

@@ -5,5 +5,5 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class ResultData(
-    val list:List<cardData>? = null
+    val list:List<CardData>? = null
 ):Parcelable
