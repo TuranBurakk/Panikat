@@ -19,7 +19,12 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.CardHolder>() {
     }
 
     override fun onBindViewHolder(holder: CardHolder, position: Int) {
+        val card = list[position]
+        holder.binding.apply {
+            exerciseTitleText.text = card.title
+            exerciseDescriptionText.text= card.desc
 
+        }
     }
 
     override fun getItemCount() = list.size

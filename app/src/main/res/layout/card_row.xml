@@ -49,21 +49,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/tahmini_sure"
                 android:textColor="@color/white"
-                app:layout_constraintBottom_toTopOf="@+id/estimated_time_chip"
-                app:layout_constraintStart_toStartOf="@id/estimated_time_chip" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/estimated_time_chip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:checkable="false"
-                android:text="1:20"
-                android:textColor="@color/white"
-                app:chipBackgroundColor="@color/chip_background_color"
-                app:chipCornerRadius="20dp"
-                app:chipIcon="@drawable/ic_baseline_access_time_24"
-                app:chipIconTint="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
