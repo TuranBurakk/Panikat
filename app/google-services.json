@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "308520327773",
+    "project_id": "panikat-c6f46",
+    "storage_bucket": "panikat-c6f46.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308520327773:android:11d0fc3abc5b83dd5c4bb4",
+        "android_client_info": {
+          "package_name": "com.infos.panikat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308520327773-lptrc7u9mqnu9rlbqqkbec5avrifevna.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV3302tO4yRaQL7Ha7y0iBzEMNLej7iGI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308520327773-lptrc7u9mqnu9rlbqqkbec5avrifevna.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

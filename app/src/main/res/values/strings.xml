@@ -2,4 +2,7 @@
     <string name="app_name">Panikat</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="egzersizler">Egzersizler</string>
+    <string name="home_page_desc">Başlamak istediğin egzersizi seç.</string>
+    <string name="tahmini_sure">tahmini süre</string>
 </resources>
