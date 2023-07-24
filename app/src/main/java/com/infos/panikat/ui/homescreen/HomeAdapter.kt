@@ -1,4 +1,4 @@
-package com.infos.panikat.ui
+package com.infos.panikat.ui.homescreen
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.infos.panikat.data.CardData
 import com.infos.panikat.databinding.CardRowBinding
 
-class HomeAdapter : RecyclerView.Adapter<HomeAdapter.CardHolder>() {
+class HomeAdapter(
+    private var clickListener: ICardClickListener
+    ) : RecyclerView.Adapter<HomeAdapter.CardHolder>() {
     private var list = emptyList<CardData>()
 
     class CardHolder(val binding : CardRowBinding): RecyclerView.ViewHolder(binding.root) {
@@ -24,6 +26,9 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.CardHolder>() {
             exerciseTitleText.text = card.title
             exerciseDescriptionText.text= card.desc
             estimatedTimeChip.text = card.time
+        }
+        holder.binding.card.setOnClickListener {
+            card.exercise?.let { it1 -> clickListener.navigate(it1) }
         }
     }
 

@@ -1,4 +1,4 @@
-package com.infos.panikat.ui
+package com.infos.panikat.ui.homescreen
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -17,6 +17,7 @@ class HomeViewModel: ViewModel() {
 
 
     fun getData() {
+        list.clear()
         db.collection("CardCollection").document("Card").get()
             .addOnSuccessListener { documentSnapshot ->
                 val user = documentSnapshot.toObject<ResultData>()
@@ -25,7 +26,8 @@ class HomeViewModel: ViewModel() {
                         val title = item.title
                         val desc = item.desc
                         val time = item.time
-                        val card1 = CardData(title, desc, time)
+                        val exercise = item.exercise
+                        val card1 = CardData(title, desc, time,exercise)
                         list.add(card1)
                     }
                     _card.value = list
@@ -35,8 +37,8 @@ class HomeViewModel: ViewModel() {
             }
     }
 
-
-    /*fun pushData(){
+    //for created firebase structure
+    /* fun pushData(){
         val pushList= mutableListOf<cardData>()
         val card = cardData("teststsdfa","testsfds","32")
         pushList.add(card)

@@ -7,7 +7,26 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.infos.panikat.ui.HomeFragment"
+        android:name="com.infos.panikat.ui.homescreen.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_homeFragment_to_breathingExerciseFragment"
+            app:destination="@id/breathingExerciseFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_calmingExerciseFragment"
+            app:destination="@id/calmingExerciseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/breathingExerciseFragment"
+        android:name="com.infos.panikat.ui.BreathingExerciseFragment"
+        android:label="fragment_breathing_exercise"
+        tools:layout="@layout/fragment_breathing_exercise" />
+    <fragment
+        android:id="@+id/calmingExerciseFragment"
+        android:name="com.infos.panikat.ui.CalmingExerciseFragment"
+        android:label="fragment_calming_exercise"
+        tools:layout="@layout/fragment_calming_exercise" />
+
 </navigation>
