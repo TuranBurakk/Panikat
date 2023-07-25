@@ -61,4 +61,6 @@ class CalmingExerciseFragment : BaseFragment<FragmentCalmingExerciseBinding>(Fra
             binding.floatingActionButton.setImageResource(R.drawable.ic_baseline_replay_24)
         }
     }
+
+
 }
