@@ -18,8 +18,8 @@ class CalmingExerciseFragment : BaseFragment<FragmentCalmingExerciseBinding>(Fra
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val mediaPlayer = MediaPlayer.create(requireContext(), R.raw.music)
-
-        binding.seekBar.progress = 0
+        val seekBar = binding.seekBar
+        seekBar.progress = 0
         binding.seekBar.max = mediaPlayer.duration
 
         binding.floatingActionButton.setOnClickListener {
@@ -53,14 +53,16 @@ class CalmingExerciseFragment : BaseFragment<FragmentCalmingExerciseBinding>(Fra
         }
         )
         runnable = Runnable {
-            binding.seekBar.progress = mediaPlayer.currentPosition
+            seekBar.progress = mediaPlayer.currentPosition
             handler.postDelayed(runnable,1000)
         }
         handler.postDelayed(runnable,1000)
         mediaPlayer.setOnCompletionListener {
             binding.floatingActionButton.setImageResource(R.drawable.ic_baseline_replay_24)
         }
+
     }
+
 
 
 }

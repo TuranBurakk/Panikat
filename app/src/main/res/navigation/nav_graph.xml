@@ -22,11 +22,19 @@
         android:id="@+id/breathingExerciseFragment"
         android:name="com.infos.panikat.ui.breathingexercisescreen.BreathingExerciseFragment"
         android:label="fragment_breathing_exercise"
-        tools:layout="@layout/fragment_breathing_exercise" />
+        tools:layout="@layout/fragment_breathing_exercise" >
+        <action
+            android:id="@+id/action_breathingExerciseFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/calmingExerciseFragment"
         android:name="com.infos.panikat.ui.calmingexercisescreen.CalmingExerciseFragment"
         android:label="fragment_calming_exercise"
-        tools:layout="@layout/fragment_calming_exercise" />
+        tools:layout="@layout/fragment_calming_exercise" >
+        <action
+            android:id="@+id/action_calmingExerciseFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 
 </navigation>
