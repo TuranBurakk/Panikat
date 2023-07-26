@@ -6,8 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.infos.panikat.ui.homescreen.HomeFragment
+import com.infos.panikat.ui.homescreen.HomeFragmentDirections
 
 class MainActivity : AppCompatActivity() {
 
@@ -51,7 +54,13 @@ class MainActivity : AppCompatActivity() {
 
             }
         }
-    }
+        bottomNavigationView.setOnNavigationItemReselectedListener {
+            when(it.itemId){
+                R.id.exerciseFragment -> supportFragmentManager.popBackStack()
+                R.id.home -> navController.navigate(R.id.homeFragment)
 
+            }
+        }
+    }
 
 }
