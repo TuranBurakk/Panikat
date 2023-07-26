@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Seçili durumda arka plan rengini belirtin -->
+    <item android:state_checked="true" android:drawable="@drawable/selected_bar" />
+    <!-- Seçili olmayan durumda arka plan rengini belirtin -->
+    <item android:drawable="@drawable/background_rounded" />
+</selector>
