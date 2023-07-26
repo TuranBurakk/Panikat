@@ -7,4 +7,6 @@
     <string name="tahmini_sure">Tahmini süre</string>
     <string name="Calming_title">Seni anlıyoruz</string>
     <string name="Calming_desc">Kafanı karıştıran ve aklına takılan her şeyi \n unutmanı istiyoruz</string>
+    <string name="breathing_calming_text">Acele etme. Uygun butona tıkla.</string>
+    <string name="breathing_control_text">Nefes kontrolü</string>
 </resources>
