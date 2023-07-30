@@ -1,8 +1,16 @@
 package com.infos.panikat.ui.breathingexercisescreen
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.widget.Button
+import android.widget.ImageButton
 import android.widget.SeekBar
+import androidx.appcompat.app.AlertDialog
+import androidx.navigation.fragment.findNavController
+import com.infos.panikat.R
 import com.infos.panikat.base.BaseFragment
 import com.infos.panikat.databinding.FragmentBreathingExerciseBinding
 
@@ -33,7 +41,7 @@ class BreathingExerciseFragment :
                 binding.breathingDescTv.text = nextString
                 seekBar.progress = currentIndex
             } else {
-                // Son öğeye ulaşıldığında yapılacak işlemler burada olabilir.
+                showCustomDialog(requireContext())
             }
         }
 
@@ -51,5 +59,26 @@ class BreathingExerciseFragment :
                 binding.breathingDescTv.text = currentString
             }
         })
+    }
+
+    @SuppressLint("ResourceAsColor")
+    private fun showCustomDialog(context: Context){
+        val builder = AlertDialog.Builder(context)
+        val customView = LayoutInflater.from(context).inflate(R.layout.layout_custom_dialog_breathing,null)
+        builder.setView(customView)
+        val dialog= builder.create()
+
+        val btnYes = customView.findViewById<Button>(R.id.lets_start_btn)
+        val btnClose = customView.findViewById<ImageButton>(R.id.close_btn)
+
+        btnYes.setOnClickListener{
+            findNavController().navigate(BreathingExerciseFragmentDirections.actionBreathingExerciseFragmentToCalmingExerciseFragment())
+            dialog.dismiss()
+        }
+        btnClose.setOnClickListener{
+            dialog.dismiss()
+        }
+
+        dialog.show()
     }
 }

@@ -19,8 +19,7 @@ class AppIntroActivity : AppIntro() {
                 titleColorRes = R.color.black,
                 descriptionColorRes = R.color.black,
                 backgroundColorRes = R.color.lavantai,
-
-                )
+            )
         )
         addSlide(
             AppIntroFragment.createInstance(

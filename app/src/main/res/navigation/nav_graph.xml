@@ -26,6 +26,9 @@
         <action
             android:id="@+id/action_breathingExerciseFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_breathingExerciseFragment_to_calmingExerciseFragment"
+            app:destination="@id/calmingExerciseFragment" />
     </fragment>
     <fragment
         android:id="@+id/calmingExerciseFragment"
@@ -35,6 +38,9 @@
         <action
             android:id="@+id/action_calmingExerciseFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_calmingExerciseFragment_to_breathingExerciseFragment"
+            app:destination="@id/breathingExerciseFragment" />
     </fragment>
 
 </navigation>
