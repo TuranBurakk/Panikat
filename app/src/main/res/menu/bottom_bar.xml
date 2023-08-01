@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:title=""
-        android:id="@+id/home"
-        android:icon="@drawable/home"
+        android:title="Home"
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_baseline_home_24"
 
         />
     <item
-        android:title=""
-        android:id="@+id/exerciseFragment"
-        android:icon="@drawable/glass"
-
+        android:title="Breathing"
+        android:id="@+id/breathingExerciseFragment"
+        android:icon="@drawable/breathing"
        />
+    <item
+        android:title="Calming"
+        android:id="@+id/calmingExerciseFragment"
+        android:icon="@drawable/yoga"/>
 </menu>

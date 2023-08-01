@@ -9,5 +9,4 @@ data class CardData(
     val desc : String? = null,
     val time : String? = null,
     val exercise: String? = null,
-    val ticket: List<String?>? = null
 ):Parcelable

@@ -27,7 +27,7 @@ class CalmingExerciseFragment : BaseFragment<FragmentCalmingExerciseBinding>(Fra
         val mediaPlayer = MediaPlayer.create(requireContext(), R.raw.music)
         val seekBar = binding.seekBar
         seekBar.progress = 0
-        binding.seekBar.max = mediaPlayer.duration
+        binding.seekBar.max  = mediaPlayer.duration
 
         binding.floatingActionButton.setOnClickListener {
             if (!mediaPlayer.isPlaying && mediaPlayer.currentPosition < mediaPlayer.duration) {
@@ -45,7 +45,7 @@ class CalmingExerciseFragment : BaseFragment<FragmentCalmingExerciseBinding>(Fra
         binding.seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 if (fromUser){
-                    mediaPlayer.seekTo(progress)
+                    mediaPlayer.seekTo(progress-1000)
                 }
             }
 

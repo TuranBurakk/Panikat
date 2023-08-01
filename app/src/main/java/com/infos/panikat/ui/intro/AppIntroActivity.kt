@@ -13,8 +13,8 @@ class AppIntroActivity : AppIntro() {
         super.onCreate(savedInstanceState)
         addSlide(
             AppIntroFragment.createInstance(
-                title = "Politika",
-                description = "This is the first slide of the example",
+                title = "Faydaları",
+                description = "Anksiyete ve Panik atak yaşadığınız anda uygulamamızı kullanarak kısa sürede atağınızı hafifletip kısa süreli kaybettiğiniz dış dünyaya olan bağınızı hızlı bir şekilde tekrar kazanabilirsiniz.",
                 imageDrawable = R.drawable.custom_thumb,
                 titleColorRes = R.color.black,
                 descriptionColorRes = R.color.black,
@@ -23,8 +23,38 @@ class AppIntroActivity : AppIntro() {
         )
         addSlide(
             AppIntroFragment.createInstance(
-                title = "Politika",
-                description = "This is the last slide, I won't annoy you more :)",
+                title = "Nasıl Uygulanır?",
+                description = "Kulaklığınızı takarak ya da kulaklığınızı takmadan cihaz hoparlörünü kulağınıza yakınlaştırarak “ Sakinleştirici Egzersiz “ menüsündeki beyaz gürültü sesini dinleyerek olumlama cümlelerini okuyabilirsiniz. Ekstra olarak sonrasında nefes egzersizlerini de kullanabilirsiniz.\t",
+                imageDrawable = R.drawable.custom_thumb,
+                titleColorRes = R.color.black,
+                descriptionColorRes = R.color.black,
+                backgroundColorRes = R.color.lavantai,
+            )
+        )
+        addSlide(
+            AppIntroFragment.createInstance(
+                title = "Kullanım Tavsiyeleri",
+                description = "Ses düzeyini çok açmamanızı tavsiye ediyoruz.",
+                imageDrawable = R.drawable.custom_thumb,
+                titleColorRes = R.color.black,
+                descriptionColorRes = R.color.black,
+                backgroundColorRes = R.color.lavantai,
+            )
+        )
+        addSlide(
+            AppIntroFragment.createInstance(
+                title = "Amaçlarımız",
+                description = "BGO Team x Panikat olarak panik atak, anksiyete vb. psikolojik rahatsızlıklarınızı olabildiğince minimum sürede atlatmanızı amaçlıyoruz.",
+                imageDrawable = R.drawable.custom_thumb,
+                titleColorRes = R.color.black,
+                descriptionColorRes = R.color.black,
+                backgroundColorRes = R.color.lavantai,
+            )
+        )
+        addSlide(
+            AppIntroFragment.createInstance(
+                title = "Uyarı",
+                description = "Lütfen uygulama kullanımınızı kendinize en sağlıklı gelecek şekilde tercih ediniz, fazla kullanım ve diğer yan etkilerinden BGO Team sorumlu değildir.",
                 imageDrawable = R.drawable.custom_thumb,
                 titleColorRes = R.color.black,
                 descriptionColorRes = R.color.black,

@@ -42,6 +42,7 @@ class BreathingExerciseFragment :
                 seekBar.progress = currentIndex
             } else {
                 showCustomDialog(requireContext())
+
             }
         }
 
