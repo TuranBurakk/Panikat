@@ -23,7 +23,13 @@ class BreathingExerciseFragment :
         seekBar.progress = 0
         var currentIndex = 0
 
-        val breathingExerciseList = listOf("Yazı 1", "Yazı 2", "Yazı 3", "Yazı 4", "Yazı 5","Yazı 6")
+        val breathingExerciseList = listOf(
+             getString(R.string.breathing_control_text_1)
+            ,getString(R.string.breathing_control_text_2)
+            ,getString(R.string.breathing_control_text_3)
+            ,getString(R.string.breathing_control_text_4)
+            ,getString(R.string.breathing_control_text_5)
+            ,getString(R.string.breathing_control_text_6))
 
         binding.breathingBackButton.setOnClickListener {
             if (currentIndex > 0) {
@@ -82,4 +88,5 @@ class BreathingExerciseFragment :
 
         dialog.show()
     }
+
 }

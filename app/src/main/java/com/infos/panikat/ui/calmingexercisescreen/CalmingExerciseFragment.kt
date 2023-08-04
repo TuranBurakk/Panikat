@@ -21,6 +21,9 @@ class CalmingExerciseFragment : BaseFragment<FragmentCalmingExerciseBinding>(Fra
 
     private lateinit var  runnable: Runnable
     private var handler = Handler()
+    private var currentIndex = 0
+
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -28,6 +31,14 @@ class CalmingExerciseFragment : BaseFragment<FragmentCalmingExerciseBinding>(Fra
         val seekBar = binding.seekBar
         seekBar.progress = 0
         binding.seekBar.max  = mediaPlayer.duration
+        val CalmingExerciseList = listOf(
+            getString(R.string.calming_text_1),
+            getString(R.string.calming_text_2),
+            getString(R.string.calming_text_3),
+            getString(R.string.calming_text_4),
+            getString(R.string.calming_text_5),
+            getString(R.string.calming_text_6)
+        )
 
         binding.floatingActionButton.setOnClickListener {
             if (!mediaPlayer.isPlaying && mediaPlayer.currentPosition < mediaPlayer.duration) {
@@ -61,7 +72,13 @@ class CalmingExerciseFragment : BaseFragment<FragmentCalmingExerciseBinding>(Fra
         )
         runnable = Runnable {
             seekBar.progress = mediaPlayer.currentPosition
-            handler.postDelayed(runnable,1000)
+            if (mediaPlayer.isPlaying){
+                binding.descTv.text = CalmingExerciseList[currentIndex]
+                currentIndex = (currentIndex + 1) % CalmingExerciseList.size
+            }
+
+            handler.postDelayed(runnable, 20000)
+
         }
         handler.postDelayed(runnable,1000)
         mediaPlayer.setOnCompletionListener {
@@ -91,6 +108,8 @@ class CalmingExerciseFragment : BaseFragment<FragmentCalmingExerciseBinding>(Fra
 
         dialog.show()
     }
+
+
 
 
 

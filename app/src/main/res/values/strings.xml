@@ -9,4 +9,16 @@
     <string name="Calming_desc">Kafanı karıştıran ve aklına takılan her şeyi \n unutmanı istiyoruz</string>
     <string name="breathing_calming_text">Acele etme. Uygun butona tıkla.</string>
     <string name="breathing_control_text">Nefes kontrolü</string>
+    <string name="breathing_control_text_1">Nefes egzersizine başlamadan önce rahat bir pozisyon alın ve gözlerinizi kapatarak sakinleşin.</string>
+    <string name="breathing_control_text_2">Derin bir şekilde burundan nefes alın, karın bölgenizi doldurun ve sonra yavaşça ağzınızdan nefes verin.</string>
+    <string name="breathing_control_text_3">Her nefeste kendinizi gevşetmeye odaklanın, stres ve endişelerinizi dışarıda bırakın.</string>
+    <string name="breathing_control_text_4">Nefes alırken ritminizi dengeleyin, alırken 4\'e kadar sayın ve verirken yine 4\'e kadar sayın.</string>
+    <string name="breathing_control_text_5">Nefes aldığınızda pozitif düşünceleri düşünün, negatif düşünceleri ise nefes verirken serbest bırakın.</string>
+    <string name="breathing_control_text_6">Her gün düzenli olarak nefes egzersizi yapın, zihninizi sakinleştirin ve iç huzuru keşfedin.</string>
+    <string name="calming_text_1">Zihninizin huzura erdiği anın tadını çıkarın.</string>
+    <string name="calming_text_2">Beyaz gürültü sizi rahatlatırken olumlu düşüncelere odaklanın.</string>
+    <string name="calming_text_3">Dışarıdaki stresi unutun, şu anı yaşayın ve gevşeyin.</string>
+    <string name="calming_text_4">Kendinizi dinginliğin kollarına bırakın ve derin bir nefes alın.</string>
+    <string name="calming_text_5">Kulaklarınıza hoş gelen bu sesle iç huzurunuzu keşfedin.</string>
+    <string name="calming_text_6">Günün yorgunluğunu beyaz gürültüyle geride bırakın.</string>
 </resources>

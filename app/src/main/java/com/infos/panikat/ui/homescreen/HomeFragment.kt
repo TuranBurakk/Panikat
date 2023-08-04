@@ -24,7 +24,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         /*For created firebase architectural
          viewModel.pushData()*/
 
-
         viewModel.getData()
         viewModel.card.observe(viewLifecycleOwner){list->
             adapter.setData(list)
